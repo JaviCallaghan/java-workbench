@@ -1,4 +1,4 @@
-design-patterns
+java-workbench
 ===============
 
-Design patterns implementation based on several authors
+Java-related projects from pure feature or technology testing to pattern implementations.
