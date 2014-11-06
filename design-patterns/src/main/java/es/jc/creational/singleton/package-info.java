@@ -4,4 +4,4 @@
  * 
  * @author JaviCallaghan
  */
-package es.jc.singleton;
+package es.jc.creational.singleton;

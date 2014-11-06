@@ -4,7 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import es.jc.singleton.SingletonGreeter;
+import es.jc.creational.singleton.SingletonGreeter;
 
 /**
  * Test class for Singleton creational-pattern implementation.

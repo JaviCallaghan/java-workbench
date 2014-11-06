@@ -1,4 +1,4 @@
-package es.jc.singleton;
+package es.jc.creational.singleton;
 
 /**
  * Singleton class.<br>
@@ -24,6 +24,7 @@ public class SingletonGreeter {
 	 */
 	public static SingletonGreeter getInstance() {
 		if (instance == null) {
+			// if first request, initialize static instance
 			instance = new SingletonGreeter();
 		}
 		// else, return already initialized instance
