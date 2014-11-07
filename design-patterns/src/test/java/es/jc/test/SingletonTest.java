@@ -4,7 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import es.jc.creational.singleton.SingletonGreeter;
+import es.jc.creational.singleton.Greeter;
 
 /**
  * Test class for Singleton creational-pattern implementation.
@@ -20,10 +20,10 @@ public class SingletonTest {
 		// SingletonGreeter greeter = new SingletonGreeter(); // does not work
 
 		// Get singleton instance and call business logic
-		SingletonGreeter greeter1 = SingletonGreeter.getInstance();
+		Greeter greeter1 = Greeter.getInstance();
 		greeter1.greet("Javi");
 		// Get another singleton instance and call business logic
-		SingletonGreeter greeter2 = SingletonGreeter.getInstance();
+		Greeter greeter2 = Greeter.getInstance();
 		greeter2.greet("Callaghan");
 
 		// Assert that both instances point to the same object
