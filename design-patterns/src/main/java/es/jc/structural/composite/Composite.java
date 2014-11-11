@@ -9,44 +9,44 @@ import java.util.List;
 
 /**
  * Composite class.<br>
- * Note that it holds a list of {@link Graphic} components which could be both composite or leaf instances.
+ * Note that it holds a list of {@link Component} components which could be both composite or leaf instances.
  * Inherited methods to manage this list are properly implemented.
  * 
  * @author JaviCallaghan
  */
-public final class Picture implements Graphic {
+public final class Composite implements Component {
 
-	private String foo;
-	private List<Graphic> components;
+	private String bar;
+	private List<Component> components;
 	
-	public Picture(String foo) {
+	public Composite(String bar) {
 		super();
-		this.foo = foo;
+		this.bar = bar;
 		this.components = new ArrayList<>();
 	}
 
 	@Override
-	public void draw() {
-		System.out.println("Picture [" + foo + "] (" + components.size() + " subcomponents)");
+	public void foo() {
+		System.out.println("Composite [" + bar + "] (" + components.size() + " subcomponents)");
 		// draw composite subcomponents
-		for (Graphic component : getComponents()) {
+		for (Component component : getComponents()) {
 			// note that as any tree-structure traversal method, it is necessarily recursive
-			component.draw();
+			component.foo();
 		}
 	}
 
 	@Override
-	public void add(Graphic graphic) {
+	public void add(Component graphic) {
 		components.add(graphic);
 	}
 
 	@Override
-	public void remove(Graphic graphic) {
+	public void remove(Component graphic) {
 		components.remove(graphic);
 	}
 
 	@Override
-	public Collection<Graphic> getComponents() {
+	public Collection<Component> getComponents() {
 		return components;
 	}
 

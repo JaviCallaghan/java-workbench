@@ -7,34 +7,34 @@ package es.jc.creational.singleton;
  * 
  * @author JaviCallaghan
  */
-public final class Greeter {
+public final class Singleton {
 	
 	/** Static instance of this class. */
-	private static Greeter instance = null;
+	private static Singleton instance = null;
 
 	/**
 	 * Private constructor to prevent external instantiation.
 	 */
-	private Greeter() {
+	private Singleton() {
 	}
 
 	/**
 	 * Instance request method which always returns the same singleton static instance.
 	 * @return the singleton instance (instantiates it if it is not initialized at first call)
 	 */
-	public static Greeter getInstance() {
+	public static Singleton getInstance() {
 		if (instance == null) {
 			// if first request, initialize static instance
-			instance = new Greeter();
+			instance = new Singleton();
 		}
 		// else, return already initialized instance
 		return instance;
 	}
 
 	/**
-	 * Business logic method: Simple greeting.
+	 * Business logic method.
 	 */
-	public void greet(String name) {
-		System.out.println("Hello " + name + "!! (from " + this + " == " + instance + ")");
+	public void foo() {
+		System.out.println("Foobar from " + this + " == " + instance);
 	}
 }

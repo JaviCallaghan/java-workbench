@@ -6,10 +6,10 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import es.jc.structural.composite.Circle;
-import es.jc.structural.composite.Line;
-import es.jc.structural.composite.Picture;
-import es.jc.structural.composite.Square;
+import es.jc.structural.composite.AlphaLeaf;
+import es.jc.structural.composite.BravoLeaf;
+import es.jc.structural.composite.CharlieLeaf;
+import es.jc.structural.composite.Composite;
 
 /**
  * Test class for Composite creational-pattern implementation.
@@ -22,56 +22,61 @@ public class CompositeTest {
 	public void testComposite() {
 
 		// instantiate several leaves
-		Circle c1 = new Circle("C1");
-		Line l1 = new Line("L1");
-		Square s1 = new Square("S1");
-		// draw leaf component
-		c1.draw();
-		assertNull(c1.getComponents());
+		AlphaLeaf l1 = new AlphaLeaf("L1");
+		BravoLeaf l2 = new BravoLeaf("L2");
+		CharlieLeaf l3 = new CharlieLeaf("L3");
+		// foo leaf component
+		l3.foo();
+		assertNull(l3.getComponents());
 
-		System.out.println("");
+		System.out.println("---");
+
 		// instantiate a composite
-		Picture p1 = new Picture("P1");
-		// draw empty composite
-		p1.draw();
-		assertNotNull(p1.getComponents());
-		assertTrue(p1.getComponents().isEmpty());
+		Composite c1 = new Composite("C1");
+		// foo empty composite
+		c1.foo();
+		assertNotNull(c1.getComponents());
+		assertTrue(c1.getComponents().isEmpty());
 
-		System.out.println("");
+		System.out.println("---");
+
 		// fill composite with leaves
-		p1.add(c1);
-		p1.add(l1);
-		p1.add(s1);
-		// draw composite of leaves
-		p1.draw();
+		c1.add(l1);
+		c1.add(l2);
+		c1.add(l3);
+		// foo composite of leaves
+		c1.foo();
 
-		System.out.println("");
+		System.out.println("---");
+
 		// manage composite components, adding another composite
-		p1.remove(l1);
-		p1.remove(s1);
-		Picture p2 = new Picture("P2");
-		p1.add(p2);
-		p1.add(l1);
-		p1.add(s1);
-		// draw composite with empty composite
-		p1.draw();
-
+		c1.remove(l1);
+		c1.remove(l3);
+		Composite c2 = new Composite("C2");
+		c1.add(c2);
+		// foo composite with empty composite
+		c2.foo();
 		System.out.println("");
+		c1.foo();
+
+		System.out.println("---");
+
 		// fill subcomposite
-		p2.add(new Circle("C2"));
-		p2.add(new Line("L2"));
-		p2.add(new Square("S2"));
-		// draw composites
-		p2.draw();
+		c2.add(new AlphaLeaf("L4"));
+		c2.add(new BravoLeaf("L5"));
+		c2.add(new CharlieLeaf("L6"));
+		// foo composites
+		c2.foo();
 		System.out.println("");
-		p1.draw();
+		c1.foo();
 
-		System.out.println("");
+		System.out.println("---");
+
 		// manage components
-		p1.remove(p2);
-		p1.remove(c1);
-		// draw final composite
-		p1.draw();
+		c1.remove(c2);
+		c1.add(new AlphaLeaf("L9"));
+		// foo final composite
+		c1.foo();
 
 	}
 

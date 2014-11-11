@@ -9,20 +9,20 @@ import java.util.Collection;
  * 
  * @author JaviCallaghan
  */
-public abstract class Shape implements Graphic {
+public abstract class Leaf implements Component {
 
 	@Override
-	public void add(Graphic graphic) {
+	public void add(Component graphic) {
 		// do nothing
 	}
 
 	@Override
-	public void remove(Graphic graphic) {
+	public void remove(Component graphic) {
 		// do nothing
 	}
 
 	@Override
-	public Collection<Graphic> getComponents() {
+	public Collection<Component> getComponents() {
 		// leaf components have null subcomponents
 		return null;
 	}
