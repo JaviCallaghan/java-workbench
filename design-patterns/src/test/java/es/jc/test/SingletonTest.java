@@ -19,10 +19,10 @@ public class SingletonTest {
 		// A Singleton class cannot be instantiated by calling its constructor
 		// SingletonGreeter greeter = new SingletonGreeter(); // does not work
 
-		// Get singleton instance and foo it
+		// Get singleton instance and call foo
 		Singleton greeter1 = Singleton.getInstance();
 		greeter1.foo();
-		// Get another singleton instance and foo it
+		// Get another singleton instance and call foo
 		Singleton greeter2 = Singleton.getInstance();
 		greeter2.foo();
 
