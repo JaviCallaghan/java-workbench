@@ -1,13 +1,15 @@
 package es.jc.behavioral.iterator;
 
 /**
- * Aggregate to be iterated backwards.<br>
- * No elements management methods have been implemented for simplicity: aggregate elements will be set at construction.
+ * [GOF] ConcreteAggregate - implements the Iterator creation interface to return an instance of the proper
+ * ConcreteIterator.<br>
+ * Aggregate to be iterated backwards. No elements management methods have been implemented for simplicity: aggregate
+ * elements will be set at construction.
  * 
  * @param <T> type of aggregate elements
  * @author JaviCallaghan
  */
-public class BackwardsAggregate<T> implements Aggregate<T> {
+public final class BackwardsAggregate<T> implements Aggregate<T> {
 
 	private T[] elements;
 
@@ -31,13 +33,15 @@ public class BackwardsAggregate<T> implements Aggregate<T> {
 	}
 
 	/**
-	 * Inner iterator to iterate elements backwards.<br>
-	 * Inherited methods to iterate through elements are implemented according to backwards strategy.
+	 * [GOF] ConcreteIterator - implements the Iterator interface. Keeps track of the current position in the
+	 * traversal of the aggregate.<br>
+	 * Inner iterator to iterate elements backwards. Inherited methods to iterate through elements are implemented
+	 * according to backwards strategy.
 	 * 
 	 * @param <T> type of aggregate elements
 	 * @author JaviCallaghan
 	 */
-	private class BackwardsIterator implements Iterator<T> {
+	private final class BackwardsIterator implements Iterator<T> {
 
 		private int current;
 

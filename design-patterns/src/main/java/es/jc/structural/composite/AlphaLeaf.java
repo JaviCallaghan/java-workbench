@@ -1,7 +1,7 @@
 package es.jc.structural.composite;
 
 /**
- * Leaf component. Only worries about drawing itself.
+ * Final Leaf component. Only worries about implementing its own business logic.
  * 
  * @author JaviCallaghan
  */

@@ -4,7 +4,7 @@
 package es.jc.behavioral.iterator;
 
 /**
- * Iterator class.<br>
+ * [GOF] Iterator - defines an interface for accessing and traversing elements.<br>
  * Note that it holds the aggregate reference to iterate and a current iteration item what makes possible to maintain
  * several iterations of the same aggregation at different paces.
  * 

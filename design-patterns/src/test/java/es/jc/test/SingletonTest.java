@@ -7,7 +7,9 @@ import org.junit.Test;
 import es.jc.creational.singleton.Singleton;
 
 /**
- * Test class for Singleton creational-pattern implementation.
+ * Test class for Singleton creational-pattern implementation.<br>
+ * The trick is that the only way the client has to get an instance of the singleton is through its getInstance() method
+ * and it is always turns out to be same object instance.
  * 
  * @author JaviCallaghan
  */

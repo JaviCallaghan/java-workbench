@@ -12,7 +12,9 @@ import es.jc.behavioral.iterator.BackwardsAggregate;
 import es.jc.behavioral.iterator.Iterator;
 
 /**
- * Test class for Singleton creational-pattern implementation.
+ * Test class for Singleton creational-pattern implementation.<br>
+ * The trick is that the client side knows the concrete implementation of the aggregate, and uses the corresponding
+ * iterator being unaware of its implementation.
  * 
  * @author JaviCallaghan
  */

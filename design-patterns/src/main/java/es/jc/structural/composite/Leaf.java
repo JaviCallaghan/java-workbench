@@ -3,7 +3,7 @@ package es.jc.structural.composite;
 import java.util.Collection;
 
 /**
- * Leaf components behavior.<br>
+ * [GOF] Leaf - defines behavior for leaf / primitive objects in the composition. A leaf has no children.<br>
  * Inherited methods to manage this list are properly implemented for leaf components to skip subcomponents managing.
  * Final implementations will only worry about drawing themselves.
  * 

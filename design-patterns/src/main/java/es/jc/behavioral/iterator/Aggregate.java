@@ -1,7 +1,7 @@
 package es.jc.behavioral.iterator;
 
 /**
- * Interface for all classes to be iterable.
+ * [GOF] Aggregate - defines an interface for creating an Iterator object.<br>
  * 
  * @param <T> type of aggregate elements
  * @author JaviCallaghan

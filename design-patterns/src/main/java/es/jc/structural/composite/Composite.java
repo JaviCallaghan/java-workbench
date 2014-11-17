@@ -8,7 +8,8 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * Composite class.<br>
+ * [GOF] Composite - defines behavior for components having children. Stores child components and implements their
+ * managing operations.<br>
  * Note that it holds a list of {@link Component} components which could be both composite or leaf instances.
  * Inherited methods to manage this list are properly implemented.
  * 
@@ -18,7 +19,7 @@ public final class Composite implements Component {
 
 	private String bar;
 	private List<Component> components;
-	
+
 	public Composite(String bar) {
 		super();
 		this.bar = bar;

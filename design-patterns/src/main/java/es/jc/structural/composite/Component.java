@@ -3,7 +3,7 @@ package es.jc.structural.composite;
 import java.util.Collection;
 
 /**
- * Interface for all classes to be part of the composite.
+ * [GOF] Component - Declares the interface for objects in the composition. Declares an interface for accessing and managing child components.
  * 
  * @author JaviCallaghan
  */
