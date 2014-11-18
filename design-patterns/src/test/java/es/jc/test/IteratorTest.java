@@ -8,7 +8,7 @@ import static org.junit.Assert.fail;
 import org.junit.Test;
 
 import es.jc.behavioral.iterator.Aggregate;
-import es.jc.behavioral.iterator.BackwardsAggregate;
+import es.jc.behavioral.iterator.ConcreteAggregate;
 import es.jc.behavioral.iterator.Iterator;
 
 /**
@@ -26,12 +26,12 @@ public class IteratorTest {
 		Aggregate<Integer> ba;
 
 		// create empty aggregate
-		ba = new BackwardsAggregate<>();
+		ba = new ConcreteAggregate<>();
 		assertEquals(0, ba.size());
 		assertFalse(ba.createIterator().hasNext());
 
 		// create filled aggregate
-		ba = new BackwardsAggregate<>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+		ba = new ConcreteAggregate<>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
 		assertTrue(ba.size() > 0);
 		// create two iterators for the aggregate
 		Iterator<Integer> it1 = ba.createIterator();

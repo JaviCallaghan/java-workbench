@@ -9,11 +9,11 @@ package es.jc.behavioral.iterator;
  * @param <T> type of aggregate elements
  * @author JaviCallaghan
  */
-public final class BackwardsAggregate<T> implements Aggregate<T> {
+public final class ConcreteAggregate<T> implements Aggregate<T> {
 
 	private T[] elements;
 
-	public BackwardsAggregate(T... elements) {
+	public ConcreteAggregate(T... elements) {
 		this.elements = elements;
 	}
 
@@ -24,7 +24,7 @@ public final class BackwardsAggregate<T> implements Aggregate<T> {
 	 */
 	@Override
 	public Iterator<T> createIterator() {
-		return new BackwardsIterator();
+		return new ConcreteIterator();
 	}
 
 	@Override
@@ -41,11 +41,11 @@ public final class BackwardsAggregate<T> implements Aggregate<T> {
 	 * @param <T> type of aggregate elements
 	 * @author JaviCallaghan
 	 */
-	private final class BackwardsIterator implements Iterator<T> {
+	private final class ConcreteIterator implements Iterator<T> {
 
 		private int current;
 
-		public BackwardsIterator() {
+		public ConcreteIterator() {
 			super();
 			this.current = elements.length - 1;
 		}

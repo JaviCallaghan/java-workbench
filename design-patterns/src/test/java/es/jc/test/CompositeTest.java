@@ -6,10 +6,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import es.jc.structural.composite.AlphaLeaf;
-import es.jc.structural.composite.BravoLeaf;
-import es.jc.structural.composite.CharlieLeaf;
 import es.jc.structural.composite.Composite;
+import es.jc.structural.composite.ConcreteLeaf;
 
 /**
  * Test class for Composite creational-pattern implementation.<br>
@@ -24,9 +22,9 @@ public class CompositeTest {
 	public void testComposite() {
 
 		// instantiate several leaves
-		AlphaLeaf l1 = new AlphaLeaf("L1");
-		BravoLeaf l2 = new BravoLeaf("L2");
-		CharlieLeaf l3 = new CharlieLeaf("L3");
+		ConcreteLeaf l1 = new ConcreteLeaf("L1");
+		ConcreteLeaf l2 = new ConcreteLeaf("L2");
+		ConcreteLeaf l3 = new ConcreteLeaf("L3");
 		// foo leaf component
 		l3.foo();
 		assertNull(l3.getComponents());
@@ -64,9 +62,9 @@ public class CompositeTest {
 		System.out.println("---");
 
 		// fill subcomposite
-		c2.add(new AlphaLeaf("L4"));
-		c2.add(new BravoLeaf("L5"));
-		c2.add(new CharlieLeaf("L6"));
+		c2.add(new ConcreteLeaf("L4"));
+		c2.add(new ConcreteLeaf("L5"));
+		c2.add(new ConcreteLeaf("L6"));
 		// foo composites
 		c2.foo();
 		System.out.println("");
@@ -76,7 +74,7 @@ public class CompositeTest {
 
 		// manage components
 		c1.remove(c2);
-		c1.add(new AlphaLeaf("L9"));
+		c1.add(new ConcreteLeaf("L9"));
 		// foo final composite
 		c1.foo();
 

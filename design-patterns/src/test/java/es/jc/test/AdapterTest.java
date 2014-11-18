@@ -2,7 +2,7 @@ package es.jc.test;
 
 import org.junit.Test;
 
-import es.jc.structural.adapter.LegacyAdapter;
+import es.jc.structural.adapter.Adapter;
 import es.jc.structural.adapter.Target;
 
 /**
@@ -18,7 +18,7 @@ public class AdapterTest {
 	public void testAdapter() {
 
 		// instantiate target implementation
-		Target target = new LegacyAdapter("foobar");
+		Target target = new Adapter("foobar");
 		target.foo();
 
 	}

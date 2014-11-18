@@ -1,18 +1,18 @@
 package es.jc.structural.adapter;
 
 /**
- * [GOF] Adapter - adapts the interface of Adaptee to the Target interface.<br>
+ * [GOF] Adapter - adapts the interface of a concrete Adaptee to the Target interface.<br>
  * Note that it holds a concrete Adaptee instance to delegate adapted methods execution.
  * 
  * @author JaviCallaghan
  */
-public final class LegacyAdapter implements Target {
+public final class Adapter implements Target {
 
 	private Adaptee adaptee;
 
-	public LegacyAdapter(String bar) {
+	public Adapter(String bar) {
 		super();
-		this.adaptee = new LegacyAdaptee(bar);
+		this.adaptee = new ConcreteAdaptee(bar);
 	}
 
 	@Override
