@@ -15,6 +15,7 @@ public final class ConcreteAdaptee implements Adaptee {
 	}
 
 	@Override
+	@Deprecated
 	public void bar() {
 		System.out.println("Adaptee [" + bar + "]");
 	}

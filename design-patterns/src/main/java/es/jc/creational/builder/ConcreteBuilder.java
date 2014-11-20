@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * 
  * @author JaviCallaghan
  */
-public class ConcreteBuilder implements Builder {
+public final class ConcreteBuilder implements Builder {
 
 	private Product product;
 

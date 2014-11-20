@@ -11,7 +11,7 @@ import java.util.Set;
  * 
  * @author JaviCallaghan
  */
-public class Product {
+public final class Product {
 
 	private List<String> partsA;
 	private Set<Integer> partsB;
