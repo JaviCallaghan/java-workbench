@@ -16,3 +16,17 @@ Java-related projects from pure feature or technology testing to pattern impleme
 > [TP2014] - http://www.tutorialspoint.com/design_pattern/: "Java Design Patterns" (2014)
 
 > [JC2000] - http://www.javacamp.org/designPattern/: "Java Design Patterns" (2000) - sponsored by GUO International, Nashville Tennessee, USA
+
+* **java8-new-features**: Maven project to hold Java test usage implementations of new features of Java 8 [ORAJSENEW2014].
+
+  This project is based on several online documentation resources related with new features of Java 8, from Oracle Java SE Tutorial [ORAJSE2014] to more specific sources as [JCG2014] or [DEV2014].
+  
+---
+
+> [ORAJSENEW2014] - http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html: "What's New in JDK 8" (2014)
+
+> [ORAJSE2014] - https://docs.oracle.com/javase/tutorial/: "The Java™ Tutorials" (2014)
+
+> [JCG2014] http://www.javacodegeeks.com/2014/05/java-8-features-tutorial.html: "Java 8 Features Tutorial – The ULTIMATE Guide" (2014)
+
+> [DEV2014] http://www.developer.com/java/new-core-features-in-java-8.html: "New Core Features in Java 8" (2014)
