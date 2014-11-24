@@ -37,6 +37,6 @@ public final class Singleton {
 	 * Business logic method.
 	 */
 	public void foo() {
-		System.out.println("Foobar from " + this + " == " + instance);
+		System.out.println("Singleton [" + this.toString() + " == " + instance.toString() + "]");
 	}
 }

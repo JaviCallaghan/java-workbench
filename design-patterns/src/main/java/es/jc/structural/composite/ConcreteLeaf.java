@@ -7,16 +7,14 @@ package es.jc.structural.composite;
  */
 public final class ConcreteLeaf extends Leaf {
 
-	private String bar;
 
-	public ConcreteLeaf(String bar) {
+	public ConcreteLeaf() {
 		super();
-		this.bar = bar;
 	}
 
 	@Override
 	public void foo() {
-		System.out.println("Leaf [" + bar + "]");
+		System.out.println("Leaf [" + this.toString() + "]");
 	}
 
 }

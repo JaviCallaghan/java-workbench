@@ -2,6 +2,7 @@ package es.jc.test;
 
 import static org.junit.Assert.assertTrue;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import es.jc.creational.singleton.Singleton;
@@ -14,6 +15,11 @@ import es.jc.creational.singleton.Singleton;
  * @author JaviCallaghan
  */
 public class SingletonTest {
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.out.println("\n######## SINGLETON TEST ########\n");
+	}
 
 	@Test
 	public void testSingleton() {

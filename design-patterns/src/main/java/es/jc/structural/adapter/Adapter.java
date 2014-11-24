@@ -10,13 +10,14 @@ public final class Adapter implements Target {
 
 	private Adaptee adaptee;
 
-	public Adapter(String bar) {
+	public Adapter() {
 		super();
-		this.adaptee = new ConcreteAdaptee(bar);
+		this.adaptee = new ConcreteAdaptee();
 	}
 
 	@Override
 	public void foo() {
+		// this way we are hiding the deprecated method call to client side
 		adaptee.bar();
 	}
 	

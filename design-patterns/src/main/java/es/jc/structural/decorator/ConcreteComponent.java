@@ -9,7 +9,7 @@ public final class ConcreteComponent implements Component {
 
 	@Override
 	public void foo() {
-		System.out.println("Foo ConcreteComponent " + this.hashCode());
+		System.out.println("Component [" + this.hashCode() + "]");
 	}
 
 }

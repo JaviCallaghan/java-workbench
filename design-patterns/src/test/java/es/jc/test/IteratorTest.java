@@ -5,6 +5,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import es.jc.behavioral.iterator.Aggregate;
@@ -19,6 +20,11 @@ import es.jc.behavioral.iterator.Iterator;
  * @author JaviCallaghan
  */
 public class IteratorTest {
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.out.println("\n######## ITERATOR TEST ########\n");
+	}
 
 	@Test
 	public void testIterator() {

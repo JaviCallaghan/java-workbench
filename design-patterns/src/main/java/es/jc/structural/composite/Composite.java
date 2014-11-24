@@ -17,18 +17,16 @@ import java.util.List;
  */
 public final class Composite implements Component {
 
-	private String bar;
 	private List<Component> components;
 
-	public Composite(String bar) {
+	public Composite() {
 		super();
-		this.bar = bar;
 		this.components = new ArrayList<>();
 	}
 
 	@Override
 	public void foo() {
-		System.out.println("Composite [" + bar + "] (" + components.size() + " subcomponents)");
+		System.out.println("Composite [" + this.toString() + "] (" + components.size() + " subcomponents)");
 		// draw composite subcomponents
 		for (Component component : getComponents()) {
 			// note that as any tree-structure traversal method, it is necessarily recursive

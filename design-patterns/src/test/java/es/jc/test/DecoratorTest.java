@@ -1,5 +1,6 @@
 package es.jc.test;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import es.jc.structural.decorator.Component;
@@ -16,6 +17,11 @@ import es.jc.structural.decorator.ConcreteDecorator2;
  * @author JaviCallaghan
  */
 public class DecoratorTest {
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.out.println("\n######## DECORATOR TEST ########\n");
+	}
 
 	@Test
 	public void testDecorator() {

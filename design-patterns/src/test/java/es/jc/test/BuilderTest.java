@@ -1,5 +1,6 @@
 package es.jc.test;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import es.jc.creational.builder.ConcreteBuilder;
@@ -14,6 +15,11 @@ import es.jc.creational.builder.Director;
  * @author JaviCallaghan
  */
 public class BuilderTest {
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.out.println("\n######## BUILDER TEST ########\n");
+	}
 
 	@Test
 	public void testBuilder() {

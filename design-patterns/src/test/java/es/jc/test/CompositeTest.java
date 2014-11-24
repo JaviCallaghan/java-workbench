@@ -4,6 +4,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import es.jc.structural.composite.Composite;
@@ -17,14 +18,19 @@ import es.jc.structural.composite.ConcreteLeaf;
  * @author JaviCallaghan
  */
 public class CompositeTest {
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.out.println("\n######## COMPOSITE TEST ########\n");
+	}
 
 	@Test
 	public void testComposite() {
 
 		// instantiate several leaves
-		ConcreteLeaf l1 = new ConcreteLeaf("L1");
-		ConcreteLeaf l2 = new ConcreteLeaf("L2");
-		ConcreteLeaf l3 = new ConcreteLeaf("L3");
+		ConcreteLeaf l1 = new ConcreteLeaf();
+		ConcreteLeaf l2 = new ConcreteLeaf();
+		ConcreteLeaf l3 = new ConcreteLeaf();
 		// foo leaf component
 		l3.foo();
 		assertNull(l3.getComponents());
@@ -32,7 +38,7 @@ public class CompositeTest {
 		System.out.println("---");
 
 		// instantiate a composite
-		Composite c1 = new Composite("C1");
+		Composite c1 = new Composite();
 		// foo empty composite
 		c1.foo();
 		assertNotNull(c1.getComponents());
@@ -52,7 +58,7 @@ public class CompositeTest {
 		// manage composite components, adding another composite
 		c1.remove(l1);
 		c1.remove(l3);
-		Composite c2 = new Composite("C2");
+		Composite c2 = new Composite();
 		c1.add(c2);
 		// foo composite with empty composite
 		c2.foo();
@@ -62,9 +68,9 @@ public class CompositeTest {
 		System.out.println("---");
 
 		// fill subcomposite
-		c2.add(new ConcreteLeaf("L4"));
-		c2.add(new ConcreteLeaf("L5"));
-		c2.add(new ConcreteLeaf("L6"));
+		c2.add(new ConcreteLeaf());
+		c2.add(new ConcreteLeaf());
+		c2.add(new ConcreteLeaf());
 		// foo composites
 		c2.foo();
 		System.out.println("");
@@ -74,7 +80,7 @@ public class CompositeTest {
 
 		// manage components
 		c1.remove(c2);
-		c1.add(new ConcreteLeaf("L9"));
+		c1.add(new ConcreteLeaf());
 		// foo final composite
 		c1.foo();
 

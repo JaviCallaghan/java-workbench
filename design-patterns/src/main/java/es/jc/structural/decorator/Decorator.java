@@ -2,7 +2,7 @@ package es.jc.structural.decorator;
 
 /**
  * [GOF] Decorator - Maintains a reference to a Component object and defines an interfaces that conforms to Component's
- * interface.
+ * interface.<br>
  * Note that it delegates in component attribute (set at construction) the execution of the business logic method.
  * 
  * @author JaviCallaghan
