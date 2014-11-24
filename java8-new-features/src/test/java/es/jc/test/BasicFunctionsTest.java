@@ -6,7 +6,7 @@ import es.jc.functions.BasicFunctions;
 import es.jc.functions.BasicFunctionsString;
 
 /**
- * Test class for BasicFunctionsString implementation.<br>
+ * Test class for BasicFunctionsString implementation.
  * 
  * @author JaviCallaghan
  */

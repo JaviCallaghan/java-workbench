@@ -7,7 +7,7 @@ import java.util.function.Supplier;
 
 /**
  * Facade which expects functional interfaces from {@code java.util.function} package as method parameters.<br>
- * Only the basic functions will be considered:<br>
+ * Only the basic functions will be considered:
  * <ul>
  * <li>{@link Consumer} - accept(T t):void</li>
  * <li>{@link Function} - apply(T t):R</li>
