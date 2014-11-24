@@ -6,22 +6,22 @@ package es.jc.structural.decorator;
  * 
  * @author JaviCallaghan
  */
-public class ConcreteDecorator1 extends Decorator {
+public final class ConcreteDecoratorB extends Decorator {
 
-	public ConcreteDecorator1(Component component) {
+	public ConcreteDecoratorB(Component component) {
 		super(component);
 	}
 
 	@Override
 	public void foo() {
 		super.foo();
-		bar();
+		foobar();
 	}
 	
 	/**
-	 * Additional responsibility to be added to the decorated component foo behavior.
+	 * Additional business logic to be added to the decorated component foo behavior.
 	 */
-	private void bar() {
+	private void foobar() {
 		System.out.println("Decorator [" + this.toString() + "]");
 	}
 	

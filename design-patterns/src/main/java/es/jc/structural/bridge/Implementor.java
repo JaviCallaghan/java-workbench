@@ -1,7 +1,7 @@
 package es.jc.structural.bridge;
 
 /**
- * [GOF] Implementor - defines the abstractions's interface and mantains a reference to an implementor object.<br>
+ * [GOF] Implementor - defines the abstractions's interface and mantains a reference to an implementor object.
  * 
  * @author JaviCallaghan
  */

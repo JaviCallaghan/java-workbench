@@ -16,14 +16,14 @@ public interface Iterator<T> {
 	/**
 	 * Retrieves next element of the iteration.
 	 * 
-	 * @return fetches and returns next element of the iteration.
+	 * @return fetches and returns next element of the iteration
 	 */
 	T next();
 
 	/**
 	 * Tells if an iteration is not done yet.
 	 * 
-	 * @return {@code true} if iteration is not done yet, {@code false} otherwise.
+	 * @return {@code true} if iteration is not done yet, {@code false} otherwise
 	 */
 	boolean hasNext();
 

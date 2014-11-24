@@ -1,8 +1,8 @@
 package es.jc.creational.singleton;
 
 /**
- * [GOF] Singleton - defines an Instance operation that lets clients access its unique instance. May be responsible for
- * creating its own unique instance.<br>
+ * [GOF] Singleton - defines an Instance operation that lets client side access its unique instance. May be responsible
+ * for creating its own unique instance.<br>
  * Note that it has private constructor to prevent it to be instantiated from outside. Provides method to return the
  * unique static instance of this class held inside it and instantiated from inside at first request.
  * 
@@ -10,7 +10,9 @@ package es.jc.creational.singleton;
  */
 public final class Singleton {
 
-	/** Static instance of this class. */
+	/**
+	 * Static instance of this class.
+	 */
 	private static Singleton instance = null;
 
 	/**
@@ -33,10 +35,4 @@ public final class Singleton {
 		return instance;
 	}
 
-	/**
-	 * Business logic method.
-	 */
-	public void foo() {
-		System.out.println("Singleton [" + this.toString() + " == " + instance.toString() + "]");
-	}
 }

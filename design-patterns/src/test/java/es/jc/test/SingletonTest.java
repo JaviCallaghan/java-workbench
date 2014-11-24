@@ -9,8 +9,8 @@ import es.jc.creational.singleton.Singleton;
 
 /**
  * Test class for Singleton creational-pattern implementation.<br>
- * The trick is that the only way the client has to get an instance of the singleton is through its getInstance() method
- * and it is always turns out to be same object instance.
+ * The trick is that the only way the client side has to get an instance of the singleton is through its getInstance()
+ * method and it is always turns out to be same object instance.
  * 
  * @author JaviCallaghan
  */
@@ -24,17 +24,17 @@ public class SingletonTest {
 	@Test
 	public void testSingleton() {
 
-		// A Singleton class cannot be instantiated by calling its constructor
+		// a Singleton class cannot be instantiated by calling its constructor
 		// SingletonGreeter greeter = new SingletonGreeter(); // does not work
 
-		// Get singleton instance and call foo
+		// get singleton instance
 		Singleton greeter1 = Singleton.getInstance();
-		greeter1.foo();
-		// Get another singleton instance and call foo
+		System.out.println("Greeter 1: " + greeter1.toString());
+		// get another singleton instance
 		Singleton greeter2 = Singleton.getInstance();
-		greeter2.foo();
+		System.out.println("Greeter 2: " + greeter2.toString());
 
-		// Assert that both instances point to the same object
+		// assert that both instances point to the same object
 		assertTrue(greeter1 == greeter2);
 	}
 

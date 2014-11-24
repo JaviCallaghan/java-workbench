@@ -1,7 +1,7 @@
 package es.jc.structural.adapter;
 
 /**
- * [GOF] Adaptee - defines an existing interface that needs adapting.<br>
+ * [GOF] Adaptee - defines an existing interface that needs adapting.
  * 
  * @author JaviCallaghan
  */

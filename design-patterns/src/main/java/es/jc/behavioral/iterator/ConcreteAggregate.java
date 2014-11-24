@@ -11,16 +11,24 @@ package es.jc.behavioral.iterator;
  */
 public final class ConcreteAggregate<T> implements Aggregate<T> {
 
+	/**
+	 * Simple aggregate implementation (as a array of T).
+	 */
 	private T[] elements;
 
+	/**
+	 * Public constructor to initialize elements.
+	 * 
+	 * @param elements aggregate elements to be initialized
+	 */
 	public ConcreteAggregate(T... elements) {
 		this.elements = elements;
 	}
 
 	/**
-	 * {@inheritDoc}<br>
+	 * {@inheritDoc}
 	 * 
-	 * @return Backwards strategy iterator.
+	 * @return Backwards strategy iterator
 	 */
 	@Override
 	public Iterator<T> createIterator() {
@@ -43,8 +51,14 @@ public final class ConcreteAggregate<T> implements Aggregate<T> {
 	 */
 	private final class ConcreteIterator implements Iterator<T> {
 
+		/**
+		 * Current iterator index.
+		 */
 		private int current;
 
+		/**
+		 * Public constructor to initialize iterator.
+		 */
 		public ConcreteIterator() {
 			super();
 			this.current = elements.length - 1;

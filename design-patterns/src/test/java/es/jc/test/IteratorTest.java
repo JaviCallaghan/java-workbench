@@ -29,15 +29,20 @@ public class IteratorTest {
 	@Test
 	public void testIterator() {
 
+		// aggregate to iterate according to implementation iterator
 		Aggregate<Integer> ba;
 
 		// create empty aggregate
 		ba = new ConcreteAggregate<>();
+		System.out.println("Aggregate with " + ba.size() + " elements");
 		assertEquals(0, ba.size());
 		assertFalse(ba.createIterator().hasNext());
 
+		System.out.println("---");
+
 		// create filled aggregate
 		ba = new ConcreteAggregate<>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+		System.out.println("Aggregate with " + ba.size() + " elements");
 		assertTrue(ba.size() > 0);
 		// create two iterators for the aggregate
 		Iterator<Integer> it1 = ba.createIterator();

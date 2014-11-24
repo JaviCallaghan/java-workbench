@@ -15,6 +15,11 @@ public abstract class Abstraction {
 
 	private Implementor bridge;
 
+	/**
+	 * Public constructor, which receives implementor implementation instance.
+	 *
+	 * @param implementor
+	 */
 	public Abstraction(Implementor implementor) {
 		super();
 		this.bridge = implementor;

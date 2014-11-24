@@ -11,8 +11,14 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public final class ConcreteBuilder implements Builder {
 
+	/**
+	 * Product to be built and retrieved.
+	 */
 	private Product product;
 
+	/**
+	 * Public constructor to instantiate product.
+	 */
 	public ConcreteBuilder() {
 		super();
 		product = new Product();
@@ -38,6 +44,11 @@ public final class ConcreteBuilder implements Builder {
 		product.setPartC(true);
 	}
 
+	/**
+	 * Method to return a built product.
+	 * 
+	 * @return a product
+	 */
 	public Product getProduct() {
 		return product;
 	}

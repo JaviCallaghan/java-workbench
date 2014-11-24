@@ -10,7 +10,12 @@ package es.jc.creational.builder;
  * @author JaviCallaghan
  */
 public final class Director {
-	
+
+	/**
+	 * Creation logic method.
+	 * 
+	 * @param builder to be used along creation algorithm
+	 */
 	public static void createProduct(Builder builder) {
 		// create new building
 		builder.buildNew();

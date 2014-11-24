@@ -8,8 +8,14 @@ package es.jc.structural.adapter;
  */
 public final class Adapter implements Target {
 
+	/**
+	 * 
+	 */
 	private Adaptee adaptee;
 
+	/**
+	 * Public constructor, which forces adaptee implementation instance.
+	 */
 	public Adapter() {
 		super();
 		this.adaptee = new ConcreteAdaptee();

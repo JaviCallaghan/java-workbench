@@ -9,7 +9,7 @@ package es.jc.structural.bridge;
  * 
  * @author JaviCallaghan
  */
-public class ConcreteImplementor implements Implementor {
+public final class ConcreteImplementor implements Implementor {
 
 	@Override
 	public void foo() {

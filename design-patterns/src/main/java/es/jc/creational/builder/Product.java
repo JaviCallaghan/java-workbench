@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * [GOF] Product - represents the complex object under construction. Includes interfaces for assembling the parts.<br>
+ * [GOF] Product - represents the complex object under construction. Includes interfaces for assembling the parts.
  * 
  * @author JaviCallaghan
  */

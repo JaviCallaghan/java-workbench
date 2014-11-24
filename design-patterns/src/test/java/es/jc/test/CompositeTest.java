@@ -12,7 +12,7 @@ import es.jc.structural.composite.ConcreteLeaf;
 
 /**
  * Test class for Composite creational-pattern implementation.<br>
- * The trick is that the client invokes business logic of components regardless of their composite/leaf nature,
+ * The trick is that the client side invokes business logic of components regardless of their composite/leaf nature,
  * doing in the first case a recursive traversal through business logic of children components.
  * 
  * @author JaviCallaghan

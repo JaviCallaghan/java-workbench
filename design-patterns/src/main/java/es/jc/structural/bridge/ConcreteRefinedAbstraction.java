@@ -8,7 +8,7 @@ package es.jc.structural.bridge;
  * 
  * @author JaviCallaghan
  */
-public class ConcreteRefinedAbstraction extends RefinedAbstraction {
+public final class ConcreteRefinedAbstraction extends RefinedAbstraction {
 
 	public ConcreteRefinedAbstraction(Implementor implementor) {
 		super(implementor);

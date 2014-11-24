@@ -1,7 +1,7 @@
 package es.jc.structural.adapter;
 
 /**
- * [GOF] Target - defines the domain-specific interface that client side uses.<br>
+ * [GOF] Target - defines the domain-specific interface that client side uses.
  * 
  * @author JaviCallaghan
  */
