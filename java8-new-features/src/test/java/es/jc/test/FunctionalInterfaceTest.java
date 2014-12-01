@@ -3,6 +3,7 @@ package es.jc.test;
 import org.junit.Test;
 
 import es.jc.lambdas.FunctionalDefaultInterface;
+import es.jc.lambdas.FunctionalDefaultInterfaceImpl;
 import es.jc.lambdas.FunctionalInterface;
 
 /**
@@ -35,37 +36,56 @@ public class FunctionalInterfaceTest {
 	@Test
 	public void testFunctionalDefaultInterface() {
 		// interface instance extending FunctionalInterface with a lambda expression implementation
-		FunctionalDefaultInterface.foobar();
+		FunctionalDefaultInterface.baz();
 		FunctionalDefaultInterface fdi = () -> System.out.println("Foo " + this.toString());
 		fdi.foo();
 		fdi.bar();
-		fdi.foobar("Alpha");
+		fdi.foobar();
 	}
 
 	@Test
 	public void testFunctionalDefaultInterfaceMethodRef() {
 		// calling static method of FunctionalDefaultInterface
-		FunctionalDefaultInterface.foobar();
+		FunctionalDefaultInterface.baz();
+
+		System.out.println("---");
+		
+		// implementation instance by new method reference
+		FunctionalDefaultInterface fdi = FunctionalDefaultInterfaceImpl::new;
+		fdi.foobar();
+		
+		System.out.println("---");
+
+		// interface instance extending FunctionalInterface with a local private static method reference implementation
+		fdi = FunctionalInterfaceTest::aux;
+		fdi.foobar();
 
 		System.out.println("---");
 
 		// interface instance extending FunctionalInterface with a local private method reference implementation
-		FunctionalDefaultInterface fdi = this::foo2;
-		fdi.foo();
-		fdi.bar();
-		fdi.foobar("Bravo");
-
+		fdi = this::aux2;
+		fdi.foobar();
+				
 		System.out.println("---");
 
 		// interface instance extending FunctionalInterface with a static method reference implementation
-		fdi = FunctionalDefaultInterface::foobar;
-		fdi.foo();
-		fdi.bar();
-		fdi.foobar("Charlie");
+		fdi = FunctionalDefaultInterface::baz;
+		fdi.foobar();
+
 	}
 
-	private void foo2() {
-		System.out.println("Foo2 " + this.toString());
+	/**
+	 * Auxiliary private method to test local static method references.
+	 */
+	private static void aux() {
+		System.out.println("Aux");
+	}
+	
+	/**
+	 * Auxiliary private method to test local non-static method references.
+	 */
+	private void aux2() {
+		System.out.println("Aux " + this.toString());
 	}
 
 }

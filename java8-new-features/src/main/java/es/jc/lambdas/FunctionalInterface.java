@@ -7,6 +7,9 @@ package es.jc.lambdas;
  */
 public interface FunctionalInterface {
 
+	/**
+	 * Method to be overridden at implementation.
+	 */
 	void foo();
 
 }

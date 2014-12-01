@@ -8,19 +8,29 @@ package es.jc.lambdas;
  */
 public interface FunctionalDefaultInterface extends FunctionalInterface {
 
+	/**
+	 * Default non-static method.
+	 */
 	default void bar() {
 		System.out.println("Bar " + this.toString());
 	}
-
-	default void foobar(String param) {
-		// note that we can call static, local and parameter's public methods in default method bodies with no problem
-		foobar();
-		foo();
-		System.out.println(param.toString());
+	
+	/**
+	 * Static method.
+	 */
+	static void baz() {
+		System.out.println("Baz");
 	}
 
-	static void foobar() {
+	/**
+	 * Default non-static method (as it calls both static and non-static methods).
+	 */
+	default void foobar() {
 		System.out.println("Foobar");
+		// note that we can call inherited and static method implementations
+		foo();
+		bar();
+		baz();
 	}
 
 }
