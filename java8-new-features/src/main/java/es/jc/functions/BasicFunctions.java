@@ -14,6 +14,7 @@ import java.util.function.Supplier;
  * <li>{@link Predicate} - test(T t):boolean</li>
  * <li>{@link Supplier} - get():T</li>
  * </ul>
+ * <p><img src="../../../../resources/javadoc-files/java-logo-lambda.png"/></p>
  * 
  * @author JaviCallaghan
  */
