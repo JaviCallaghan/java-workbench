@@ -93,5 +93,5 @@ public class StreamsTest {
 				.mapToInt(t -> t.getLevel())
 				.average().orElse(0));
 	}
-
+	
 }
