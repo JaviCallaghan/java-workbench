@@ -9,7 +9,7 @@ package es.jc.structural.adapter;
 public final class Adapter implements Target {
 
 	/**
-	 * 
+	 * Adaptee reference.
 	 */
 	private Adaptee adaptee;
 
@@ -26,5 +26,5 @@ public final class Adapter implements Target {
 		// this way we are hiding the deprecated method call to client side
 		adaptee.bar();
 	}
-	
+
 }
