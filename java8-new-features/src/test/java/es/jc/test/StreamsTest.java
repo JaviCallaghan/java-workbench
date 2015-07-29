@@ -40,6 +40,7 @@ public class StreamsTest {
 				.collect(Collectors.toList());
 		System.out.println("\nTransformed elements: " + result.size());
 		result.forEach(t -> System.out.println(t));
+
 	}
 
 	@Test
@@ -93,5 +94,5 @@ public class StreamsTest {
 				.mapToInt(t -> t.getLevel())
 				.average().orElse(0));
 	}
-	
+
 }

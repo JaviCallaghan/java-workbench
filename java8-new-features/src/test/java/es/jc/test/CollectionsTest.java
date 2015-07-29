@@ -70,4 +70,30 @@ public class CollectionsTest {
 		System.out.println("\nInicialmente: " + Arrays.toString(literals.toArray()));
 
 	}
+
+	@Test
+	public void testListComplexCollect() {
+
+		List<String> allWords = Arrays.asList("UNO", "DOS", "TRES", "CUATRO", "CINCO", "SEIS", "SIETE", "OCHO",
+				"NUEVE",
+				"DIEZ");
+		List<String> requestedWords = Arrays.asList("UNO", "UNO", "CIEN", "CINCO");
+
+		// we want a list with all the words in requestedWords that are in allWords, so null be inserted when word is
+		// not found
+
+		ArrayList<String> resultingWords = requestedWords.stream().collect(
+				ArrayList::new,
+				(resultList, element) -> {
+					if (allWords.contains(element)) {
+						resultList.add(element);
+					} else {
+						resultList.add(null);
+					}
+				},
+				ArrayList::addAll);
+
+		resultingWords.forEach((w) -> System.out.println(w));
+
+	}
 }
