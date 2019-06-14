@@ -1,6 +1,10 @@
 java-workbench
 ===============
 
+```diff
+- este proyecto debería separarse en varios repositorios dentro de un mismo grupo común
+```
+
 Java-related projects from pure feature or technology testing to pattern implementations.
 
 * **design-patterns**: Maven project to hold Java implementations of Object-Oriented software design patterns with their corresponding tests. 
